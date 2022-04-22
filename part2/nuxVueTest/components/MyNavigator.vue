@@ -9,6 +9,7 @@
             <li><NuxtLink to="/message/add">Go to add messages page</NuxtLink></li>
             <li><NuxtLink to="/message/read">Go to read messages page</NuxtLink></li>
             <li><NuxtLink to="/myform">Go to form page</NuxtLink></li>
+            <li><NuxtLink to="/mytable">Go to table page</NuxtLink></li>
         </ul>
     </div>
 </template>

@@ -29,6 +29,7 @@ export const actions = {
         let data = {
             echo: formData
         }
+        // options gives all the necessary information for the axion-call
         let options = {
             url: "https://86a4h9y007.execute-api.eu-west-1.amazonaws.com/development/echo",
             method: "POST",
@@ -37,6 +38,7 @@ export const actions = {
             },
             data
         }
+        // wait for the result of the call before running the next function, because it's dependaent on it
         let response = await this.$axios(options);
         commit("setEchoResponse", response.data);
     }
