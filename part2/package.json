@@ -1,0 +1,13 @@
+{
+    "name": "my-app",
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "generate": "nuxt generate",
+        "start": "nuxt start"
+    },
+    "dependencies": {
+        "@babel/preset-env": "^7.12.17",
+        "nuxt": "^2.2.0"
+    }
+}
