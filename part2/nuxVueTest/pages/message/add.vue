@@ -14,6 +14,7 @@
                     myInput: ""
                 }
             },
+            // onclick call the addMessage-mutation and passes along the input
             methods: {
                 submitMessage: function() {
                     this.$store.commit('addMessage', this.myInput)

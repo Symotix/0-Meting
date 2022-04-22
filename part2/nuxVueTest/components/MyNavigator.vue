@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!--Componet that has all the webpages, similiar to navbar-->
         <h1>All webpages:</h1>
         <ul>
             <li><NuxtLink to="/">Go to index page</NuxtLink></li>

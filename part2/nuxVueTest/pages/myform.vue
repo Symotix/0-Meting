@@ -29,10 +29,12 @@
                 }
             },
             methods: {
+                // combines the 3 different inputs into 1 string
                 combineFormData: function() {
                     formData = this.myInput1 + this.myInput2 + this.myInput3
                     return formData
                 },
+                // calls the echo-action and gives along the form data
                 submitForm: function() {
                     this.$store.dispatch("echo", this.combineFormData())
                 }

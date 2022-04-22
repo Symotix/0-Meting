@@ -10,6 +10,7 @@ export const mutations = {
     increment(state) {
         state.counter++
     },
+    // adds string to messages-array
     addMessage(state, newMessage) {
         if(state.messages.length > 0) {
             state.messages = state.messages + " , " + [newMessage]
@@ -17,6 +18,7 @@ export const mutations = {
             state.messages.push(String(newMessage))
         }
     },
+    // set state to response from axios-post-call
     setEchoResponse(state, response) {
         state.echoResponse = response
     }

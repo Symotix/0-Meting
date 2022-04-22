@@ -10,10 +10,11 @@
 </template>
 
 <script>
+// on buttonclick function adds 1 to the default 0 of value in <h2>
     export default {
     data() {
             return {
-                message: 1
+                message: 0
             }
         },
         methods: {

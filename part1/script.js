@@ -5,8 +5,8 @@
 let myReversedName = "drahciRelttil";
 
 function reverseString(input) {
-    let splitString = input.split("");
-    let reversedArray = splitString.reverse();
+    let splitArray = input.split("");
+    let reversedArray = splitArray.reverse();
     let finalString = reversedArray.join("");
 
     return finalString;

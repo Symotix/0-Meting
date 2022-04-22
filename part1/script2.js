@@ -8,11 +8,13 @@ let testObject = {
     key6: 481
 }
 
+// function that gets name of key and returns value
 function logWithCertainKey(keyForValue){
     console.log(testObject[keyForValue]);
 }
 logWithCertainKey("key2");
 
+// function that writes every value of object
 function logAllValues(anObject) {
     for(currentKey in anObject){
         console.log(anObject[currentKey]);
@@ -20,7 +22,7 @@ function logAllValues(anObject) {
 }
 logAllValues(testObject);
 
-
+// function that sums all values of object and writes total
 function logTotalValue(totalObject){
     let pairsArray = Object.entries(totalObject);
     let totalSum = 0;
