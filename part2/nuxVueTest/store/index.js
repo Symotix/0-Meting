@@ -1,4 +1,4 @@
-require("dotenv").config();
+require('dotenv').config()
 
 export const state = () => ({
     counter: 0,
@@ -20,17 +20,12 @@ export const mutations = {
     },
     // set state to response from axios-post-call
     setEchoResponse(state, response) {
-        state.echoResponse = response
+        state.echoResponse = response;
     }
 }
 
 export const actions = {
-    /*axios.get('https://inwerk-files.s3-eu-west-1.amazonaws.com/opdracht3.json')
-    .then(function (response) {
-        console.log(JSON.stringify(response.data));
-    })*/
-
-    async echo ({ commit }, formData) {
+    async echo ({commit}, formData) {
         let data = {
             echo: formData
         }
@@ -43,6 +38,6 @@ export const actions = {
             data
         }
         let response = await this.$axios(options);
-        commit('setEchoResponse', response.data);
+        commit("setEchoResponse", response.data);
     }
 }
