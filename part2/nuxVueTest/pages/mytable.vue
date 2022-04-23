@@ -7,6 +7,10 @@
                 JSON heeft tijdsformaat, nejes displayen
                 JSON geeft id, zorg dat je geen duplicates hebt
         h1 Here are all the todo-items:
-
+        table(width:100%)
+            tr
+                th Name of person
+                th Description
+                th Date of call
         button
 </template>
