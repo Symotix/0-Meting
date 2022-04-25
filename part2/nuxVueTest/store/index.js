@@ -54,16 +54,8 @@ export const actions = {
                 'x-api-key': 'Zu2CEexUkRaB7kmk9t8OT3smDR26WOL48BXASI5s'
             }
         }
+        // await response and call function to add it to the state
         let getResult = await this.$axios(config);
         commit("setToDoData", getResult.data);
-
-        /*axios(config)
-        .then(function (response) {
-            console.log(JSON.stringify(response.data));
-        })
-        .catch(function (error) {
-        console.log(error);
-        });
-        */
     }
 }
