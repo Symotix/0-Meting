@@ -3,7 +3,8 @@ require('dotenv').config()
 export const state = () => ({
     counter: 0,
     messages: [],
-    echoResponse: ""
+    echoResponse: "",
+    myToDos: []
 })
 
 export const mutations = {
@@ -21,6 +22,9 @@ export const mutations = {
     // set state to response from axios-post-call
     setEchoResponse(state, response) {
         state.echoResponse = response;
+    },
+    setToDoData(state, response) {
+        state.myToDos.push(response);
     }
 }
 
@@ -41,5 +45,25 @@ export const actions = {
         // wait for the result of the call before running the next function, because it's dependaent on it
         let response = await this.$axios(options);
         commit("setEchoResponse", response.data);
+    },
+    async getToDos({commit}) {
+        let config = {
+            method: 'get',
+            url: 'https://86a4h9y007.execute-api.eu-west-1.amazonaws.com/development/nulmeting/todo',
+            headers: { 
+                'x-api-key': 'Zu2CEexUkRaB7kmk9t8OT3smDR26WOL48BXASI5s'
+            }
+        }
+        let getResult = await this.$axios(config);
+        commit("setToDoData", getResult.data);
+
+        /*axios(config)
+        .then(function (response) {
+            console.log(JSON.stringify(response.data));
+        })
+        .catch(function (error) {
+        console.log(error);
+        });
+        */
     }
 }
